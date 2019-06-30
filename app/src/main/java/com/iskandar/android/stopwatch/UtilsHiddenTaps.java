@@ -63,6 +63,7 @@ public class UtilsHiddenTaps {
         }
     }
 
+
     public void creditsOnClick(long specialKey)
     {
         Long s = Long.parseLong(DIALOG_MSG_Title.replace(" ","").substring(0,8));
