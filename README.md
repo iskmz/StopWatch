@@ -1,6 +1,6 @@
 # StopWatch
 
-a simple Stopwatch ANDROID app, with split feature
+a simple Stopwatch ANDROID app, with split / laps feature
 
 made on Jan-Feb / 2019
 
