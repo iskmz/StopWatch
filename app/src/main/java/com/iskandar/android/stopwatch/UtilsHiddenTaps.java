@@ -1,11 +1,14 @@
 package com.iskandar.android.stopwatch;
 
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.support.design.widget.Snackbar;
+import android.support.v7.widget.FitWindowsLinearLayout;
 import android.view.View;
+import android.view.Window;
 import android.widget.Toast;
 
 
@@ -26,6 +29,10 @@ public class UtilsHiddenTaps {
         this.context = context;
         this.creditsCounter = 0;
         this.view = v;
+
+        // to make snackbar LTR direction by FORCE //
+        ((MainActivity)context).getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
+        ((MainActivity)context).getWindow().getDecorView().setTextDirection(View.TEXT_DIRECTION_LTR);
     }
 
     public void initializeCounter() // to put inside other onClickListeners to initialize ! //
@@ -83,10 +90,6 @@ public class UtilsHiddenTaps {
                                     }).create();
 
         alert.setCanceledOnTouchOutside(false);
-
-        // to force LTR direction in dialog
-        alert.getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
-        alert.getWindow().getDecorView().setTextDirection(View.TEXT_DIRECTION_LTR);
 
         alert.show();
     }
